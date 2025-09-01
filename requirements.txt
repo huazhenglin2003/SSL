@@ -1,0 +1,16 @@
+accelerate==0.21.0
+einops==0.8.1
+huggingface_hub==0.33.1
+inflect==7.4.0
+natsort==8.4.0
+nltk==3.9.1
+numpy==2.3.2
+Pillow==11.3.0
+pycocoevalcap==1.2
+pycocotools==2.0.8
+safetensors==0.6.2
+simple_parsing==0.1.7
+torch==2.1.2
+tqdm==4.67.1
+transformers==4.44.2
+triton==2.1.0

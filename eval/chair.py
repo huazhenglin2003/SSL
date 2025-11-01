@@ -6,7 +6,6 @@ import json
 import inflect  
 import argparse
 import numpy as np
-from transformers import AutoTokenizer
 
 
 def combine_coco_captions(annotation_path):
@@ -29,9 +28,6 @@ def combine_coco_captions(annotation_path):
 
 
 def combine_coco_instances(annotation_path):
-    '''
-    与combine_coco_caption同理,合并COCO数据集train+val文件并保存return到字典all_caps形式{info: ,licenses: ,type: ,categories: ,images: ,annotations:}
-    '''
     if not os.path.exists("%s/instances_%s2014.json" % (annotation_path, "val")):
         raise Exception("Please download MSCOCO instance annotations for val set")
     if not os.path.exists("%s/instances_%s2014.json" % (annotation_path, "train")):
@@ -265,7 +261,6 @@ class CHAIR(object):
         coco_word_count = 0.0
 
         output = {"sentences": []}
-        hallucinated_tokens_info = {}
 
         for i, cap_eval in enumerate(caps):
             cap = cap_eval["caption"]
@@ -280,7 +275,6 @@ class CHAIR(object):
                 "mscoco_hallucinated_words": [],
                 "mscoco_gt_words": list(gt_objects),
                 "mscoco_generated_words": list(node_words),
-                "hallucination_idxs": [],
                 "words": raw_words,
             }
 
@@ -299,11 +293,10 @@ class CHAIR(object):
             hallucinated = False
             coco_word_count += len(node_words)
 
-            for word, node_word, idx in zip(words, node_words, idxs):
+            for word, node_word in zip(words, node_words):
                 if node_word not in gt_objects:
                     hallucinated_word_count += 1
                     cap_dict["mscoco_hallucinated_words"].append((word, node_word))
-                    cap_dict["hallucination_idxs"].append(idx)
                     
                     hallucinated = True
 

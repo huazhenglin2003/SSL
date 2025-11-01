@@ -81,13 +81,26 @@ bash scripts/infer_pope.sh
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{hua2025steeringlvlmssparseautoencoder,
-      title={Steering LVLMs via Sparse Autoencoder for Hallucination Mitigation}, 
-      author={Zhenglin Hua and Jinghan He and Zijun Yao and Tianxu Han and Haiyun Guo and Yuheng Jia and Junfeng Fang},
-      year={2025},
-      eprint={2505.16146},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.16146}
+@inproceedings{hua-etal-2025-steering,
+    title = "Steering {LVLM}s via Sparse Autoencoder for Hallucination Mitigation",
+    author = "Hua, Zhenglin  and
+      He, Jinghan  and
+      Yao, Zijun  and
+      Han, Tianxu  and
+      Guo, Haiyun  and
+      Jia, Yuheng  and
+      Fang, Junfeng",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2025",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-emnlp.572/",
+    pages = "10808--10828",
+    ISBN = "979-8-89176-335-7"
 }
 ```

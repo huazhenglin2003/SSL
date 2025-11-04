@@ -4,7 +4,7 @@ huggingface_hub==0.33.1
 inflect==7.4.0
 natsort==8.4.0
 nltk==3.9.1
-numpy==2.3.2
+numpy==1.26.4
 Pillow==11.3.0
 pycocoevalcap==1.2
 pycocotools==2.0.8
